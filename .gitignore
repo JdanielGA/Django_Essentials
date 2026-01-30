@@ -1,0 +1,76 @@
+# Path: .gitignore
+# --- PYTHON ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# --- DJANGO ---
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+media/
+staticfiles/
+# Django-Compressor:
+.cache/
+
+# --- ENTORNOS VIRTUALES (WSL/Linux) ---
+.venv/
+venv/
+env/
+ENV/
+env.bak/
+venv.bak/
+bin/
+include/
+lib/
+lib64/
+local/
+share/
+pyvenv.cfg
+pip-selfcheck.json
+
+# --- VARIABLES DE ENTORNO (SECRETOS) ---
+.env
+.secrets
+*.env.local
+
+# --- TEST Y COBERTURA ---
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+.pytest_cache/
+
+# --- IDEs Y EDITORES ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- SISTEMA ---
+.DS_Store
+Thumbs.db
