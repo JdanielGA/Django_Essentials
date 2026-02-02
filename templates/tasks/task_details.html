@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
+{% extends 'base.html' %}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task Details</title>
-</head>
+{% block title %}Task Details{% endblock %}
 
-<body>
+{% block content %}
     <h1>{{ task.title }}</h1>
     <a href="{% url 'task_update' task.id %}">Edit Task</a>
     <a href="{% url 'task_delete' task.id %}">Delete Task</a>
@@ -22,5 +17,4 @@
         {% endif %}
     </p>
     <a href="{% url 'task_list' %}">Back to Task List</a>
-</body>
-</html>
+{% endblock %}
