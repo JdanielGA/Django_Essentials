@@ -9,6 +9,8 @@
 
 <body>
     <h1>{{ task.title }}</h1>
+    <a href="{% url 'task_update' task.id %}">Edit Task</a>
+    <br>
     <p><strong>Description:</strong></p>
     <p>{{ task.description }}</p>
     <p><strong>Status:</strong>
