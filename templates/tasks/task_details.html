@@ -10,6 +10,7 @@
 <body>
     <h1>{{ task.title }}</h1>
     <a href="{% url 'task_update' task.id %}">Edit Task</a>
+    <a href="{% url 'task_delete' task.id %}">Delete Task</a>
     <br>
     <p><strong>Description:</strong></p>
     <p>{{ task.description }}</p>
