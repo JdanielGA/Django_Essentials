@@ -40,6 +40,14 @@ def task_update(request, task_id):
     context = {'form': form, 'task': task}
     return render(request, 'tasks/update_task.html', context)
 
+
+# Complete Task View.
+def task_complete(request, task_id):
+    task = get_object_or_404(Task, id=task_id)
+    task.completed = not task.completed
+    task.save()
+    return redirect('task_list')
+
 # Delete Task View.
 def task_delete(request, task_id):
     task = get_object_or_404(Task, id=task_id)
